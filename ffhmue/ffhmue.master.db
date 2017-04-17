@@ -2,7 +2,7 @@ $ORIGIN ffhmue.
 ; BIND data file for zone ffhmue.
 ;
 $TTL    600
-@       IN      SOA     gw01.ffhmue. hostmaster.ffhmue. (
+@       IN      SOA     gw01.ffhmue. (
                      2017031200         ; Serial
                              2h         ; Refresh
                              1h         ; Retry
@@ -10,9 +10,10 @@ $TTL    600
                             300 )       ; Negative Cache TTL
 
 ; internal ns server
-@			IN      NS      gw01.ffhmue.
+@		IN		NS		gw01.ffhmue.
 
 ; gluon gateways
-gw01			IN      A       10.13.64.1
+gw01	IN		A		10.13.64.1
 
-node			IN		A		10.13.64.10
+; local
+node	IN		A		10.13.64.10
